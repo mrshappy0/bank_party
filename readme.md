@@ -34,27 +34,31 @@ Slack to me:
 1. Pretend you have a many to many relationship set up between `dogs` and `parks` so the join model is `dog_parks`. Give an example of how you would instantiate a new `dog_park` instance.
 
 
+Customer has many banks, Bank has many customers
+Account belongs to a bank and a customer
+
+
 #### Getting Practice
 
 You already have your class method .all (Account.all, AccountHolder.all, Bank.all) as well as methods to read all the attributes of instances in those classes. Use those to help you build out the following methods:
 
-1. AccountHolder#accounts
-   - Make a method on the `account_holder` class that returns an array of all accounts that belond to the specific account_holder.
+1. Customer#accounts
+   - Make a method on the `customer` class that returns an array of all accounts that belong to the specific customer.
 
-1. AccountHolder#banks
-   - Make a method that returns a `uniq` array of all the bank names an account_holder has.
+1. Customer#banks
+   - Make a method that returns a `uniq` array of all the bank names an customer has.
 
 1. Bank#accounts
    - Method should return all accounts that belong to the specified bank.
 
-1. Bank#account_holders
-    - Method should return an array of all account_holders of the specified bank.
+1. Bank#customers
+    - Method should return an array of all customers of the specified bank.
 
-1. AccountHolder#new_account(number, nickname, bank)
-    - Takes in 3 arguments, the account number, nickname, and bank object and will create a new account associated with the account_holder instance the method was called on.
+1. Customer#new_account(number, nickname, bank)
+    - Takes in 3 arguments, the account number, nickname, and bank object and will create a new account associated with the customer instance the method was called on.
 
-1. Bank#new_account(number, nickname, account_holder)
-    - Takes in 3 arguments, the account number, nickname, and account_holder object and will create a new account associated with the bank instance the method was called on.
+1. Bank#new_account(number, nickname, customer)
+    - Takes in 3 arguments, the account number, nickname, and customer object and will create a new account associated with the bank instance the method was called on.
 
 1. Bank#oldest_account
     - Method returns the oldest account associated with the specified bank.
@@ -64,8 +68,8 @@ You already have your class method .all (Account.all, AccountHolder.all, Bank.al
     Method should return the bank object that has the most customers.
     *For an extra challenge, have this method also return the number of customers.
 
-1. AccountHolder.average_number_of_accounts
-    - Method should return the average number of accounts all account_holders have.
+1. Customer.average_number_of_accounts
+    - Method should return the average number of accounts all customers have.
 
 1. Bank.customer_count
     - Method should return a hash where each name of the bank is the key and the values are the number of customers the bank has.
