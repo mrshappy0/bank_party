@@ -22,8 +22,35 @@ class Bank
     def customers
         accounts.map do |account|
             account.customer
+        end.uniq
+    end
+
+    def customer_count
+        customers.count
+    end
+
+    def new_account(acct_number, acct_balance, customer)
+        Account.new(acct_number, acct_balance, self, customer)
+    end
+
+    def oldest_account
+        accounts.min_by do |account|
+            account.open_year
         end
     end
-    
 
-end
+    def self.most_customers
+        max_bank = all.max_by do |bank|
+            bank.customer_count
+        end
+        "#{max_bank.name} has #{max_bank.customer_count} customers"
+    end
+
+    def self.customer_count
+        bank_customers = {}
+        Bank.all.each do |bank|
+            bank_customers[bank.name] = bank.customer_count
+        end
+        bank_customers
+    end
+end 
