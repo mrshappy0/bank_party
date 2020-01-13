@@ -38,6 +38,10 @@ Customer has many banks, Bank has many customers
 Account belongs to a bank and a customer
 
 
+**How to add a Gemfile!** 
+- pry
+- require_all
+
 #### Getting Practice
 
 You already have your class method .all (Account.all, AccountHolder.all, Bank.all) as well as methods to read all the attributes of instances in those classes. Use those to help you build out the following methods:
