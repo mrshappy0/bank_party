@@ -42,38 +42,38 @@ Account belongs to a bank and a customer
 
 You already have your class method .all (Account.all, AccountHolder.all, Bank.all) as well as methods to read all the attributes of instances in those classes. Use those to help you build out the following methods:
 
-x1. Customer#accounts
+1. Customer#accounts
    - Make a method on the `customer` class that returns an array of all accounts that belong to the specific customer.
 
-x1. Customer#banks
+1. Customer#banks
    - Make a method that returns a `uniq` array of all the bank names an customer has.
 
-x1. Bank#accounts
+1. Bank#accounts
    - Method should return all accounts that belong to the specified bank.
 
-x1. Bank#customers
+1. Bank#customers
     - Method should return an array of all customers of the specified bank.
 
-x1. Customer#new_account(number, balance, bank)
+1. Customer#new_account(number, balance, bank)
     - Takes in 3 arguments, the account number, balance, and bank object and will create a new account associated with the customer instance the method was called on.
 
 
-x1. Bank#new_account(number, balance, customer)
+1. Bank#new_account(number, balance, customer)
     - Takes in 3 arguments, the account number, nickname, and customer object and will create a new account associated with the bank instance the method was called on.
 
-x1. Bank#oldest_account
+1. Bank#oldest_account
     - Method returns the oldest account associated with the specified bank.
 
-x1. Bank.most_customers
+1. Bank.most_customers
     - *(note the dot instead of the `#` symbol above. What does that indicate?)*
     Method should return the bank object that has the most customers.
     *For an extra challenge, have this method also return the number of customers.
     "________ Bank has _____ customers."
 
-x1. Customer.average_number_of_accounts
+1. Customer.average_number_of_accounts
     - Method should return the average number of accounts all customers have.
 
-x1. Bank.customer_count
+1. Bank.customer_count
     - Method should return a hash where each name of the bank is the key and the values are the number of customers the bank has.
 
 1. Bank#average_customer_age
