@@ -24,4 +24,12 @@ class Bank
     def oldest_acct
         accounts.min_by {|account| account.open_year}
     end
+
+    def self.most_customers
+        all.map do |bank|
+            # bank.accounts
+            binding.pry
+        end
+    end
+
 end 
